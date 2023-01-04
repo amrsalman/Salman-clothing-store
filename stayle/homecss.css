@@ -1,0 +1,44 @@
+.f{
+    margin-top: 3em;
+}
+.main{
+    margin-top: -45px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url("image/main.jpg") no-repeat ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.write h2 {
+
+    font-style: italic;
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.write h3 {
+
+    font-style: italic;
+    color: darksalmon;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.Offers {
+
+    padding: 20px;
+}
+.t h2{
+text-align: center;
+   color: red;
+}
+.longin{
+    align-items: center;
+    justify-content: center;
+}

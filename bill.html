@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+    <link href="stayle/homecss.css" rel="stylesheet">
+    <link rel="stylesheet" href="stayle/P-Style.css">
+    <script src="node_modules/jquery/dist/jquery.min.js" ></script>
+    <script src="script/homescript.js" ></script>
+    <style>
+        body{margin-top:20px;
+        color: #2e323c;
+        background: #f5f6fa;
+        position: relative;
+        height: 100%;
+    }
+    .invoice-container {
+        padding: 1rem;
+    }
+    .invoice-container .invoice-header .invoice-logo {
+        margin: 0.8rem 0 0 0;
+        display: inline-block;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #2e323c;
+    }
+    .invoice-container .invoice-header .invoice-logo img {
+        max-width: 130px;
+    }
+    .invoice-container .invoice-header address {
+        font-size: 0.8rem;
+        color: #9fa8b9;
+        margin: 0;
+    }
+    .invoice-container .invoice-details {
+        margin: 1rem 0 0 0;
+        padding: 1rem;
+        line-height: 180%;
+        background: #f5f6fa;
+    }
+    .invoice-container .invoice-details .invoice-num {
+        text-align: right;
+        font-size: 0.8rem;
+    }
+    .invoice-container .invoice-body {
+        padding: 1rem 0 0 0;
+    }
+    .invoice-container .invoice-footer {
+        text-align: center;
+        font-size: 0.7rem;
+        margin: 5px 0 0 0;
+    }
+
+    .invoice-status {
+        text-align: center;
+        padding: 1rem;
+        background: #ffffff;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+    }
+    .invoice-status h2.status {
+        margin: 0 0 0.8rem 0;
+    }
+    .invoice-status h5.status-title {
+        margin: 0 0 0.8rem 0;
+        color: #9fa8b9;
+    }
+    .invoice-status p.status-type {
+        margin: 0.5rem 0 0 0;
+        padding: 0;
+        line-height: 150%;
+    }
+    .invoice-status i {
+        font-size: 1.5rem;
+        margin: 0 0 1rem 0;
+        display: inline-block;
+        padding: 1rem;
+        background: #f5f6fa;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+    }
+    .invoice-status .badge {
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 767px) {
+        .invoice-container {
+            padding: 1rem;
+        }
+    }
+
+
+    .custom-table {
+        border: 1px solid #e0e3ec;
+    }
+    .custom-table thead {
+        background: #007ae1;
+    }
+    .custom-table thead th {
+        border: 0;
+        color: #ffffff;
+    }
+    .custom-table > tbody tr:hover {
+        background: #fafafa;
+    }
+    .custom-table > tbody tr:nth-of-type(even) {
+        background-color: #ffffff;
+    }
+    .custom-table > tbody td {
+        border: 1px solid #e6e9f0;
+    }
+
+
+    .card {
+        background: #ffffff;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        border: 0;
+        margin-bottom: 1rem;
+    }
+
+    .text-success {
+        color: #00bb42 !important;
+    }
+
+    .text-muted {
+        color: #9fa8b9 !important;
+    }
+
+    .custom-actions-btns {
+        margin: auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .custom-actions-btns .btn {
+        margin: .3rem 0 .3rem .3rem;
+    }</style>
+
+</head>
+
+<body style="background-image:url('image/login2.jpg ')">
+<header style="margin-bottom: 3em" class="head">
+    <nav style="background-color: blueviolet !important;"  class="navbar navbar-expand-md  fixed-top navbar-dark bg-light">
+        <div class="container-fluid  ">
+
+            <div style="margin-right: 70%">
+                <a  style="color: deeppink" class="navbar-brand" href="#">Salman</a>
+
+            </div>
+
+            <button ip="12" class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span   class="navbar-toggler-icon"></span>
+            </button>
+            <div >
+                <div  class="collapse navbar-collapse   "  id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.html"><i class="fa-solid fa-house"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html#offers">Offers</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                departments
+                            </a>
+                            <ul style="background-color: darkorchid !important;" class="dropdown-menu " aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="Men.html">Men</a></li>
+                                <li><a class="dropdown-item" href="women.html">Women</a></li>
+                                <li><a class="dropdown-item" href="children.html">Children</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sinup.html">sinup</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<section  class="vh-100"  ><div class="container">
+    <div class="row gutters">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="card">
+                <div class="card-body p-0">
+                    <div class="invoice-container">
+                        <div class="invoice-header">
+                            <!-- Row start -->
+                            <div class="row gutters">
+
+                            </div>
+                            <!-- Row end -->
+                            <!-- Row start -->
+
+
+                            <!-- Row end -->
+                        </div>
+                        <div class="invoice-body">
+                            <!-- Row start -->
+                            <div class="row gutters">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="table-responsive">
+                                        <table class="table custom-table m-0">
+                                            <thead>
+                                            <tr>
+                                                <th>Items</th>
+                                                <th>Product ID</th>
+                                                <th>Quantity</th>
+                                                <th>Sub Total</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    Wordpress Template
+                                                    <p class="m-0 text-muted">
+                                                        Reference site about Lorem Ipsum, giving information on its origins.
+                                                    </p>
+                                                </td>
+                                                <td>#50000981</td>
+                                                <td>9</td>
+                                                <td>$5000.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Maxwell Admin Template
+                                                    <p class="m-0 text-muted">
+                                                        As well as a random Lipsum generator.
+                                                    </p>
+                                                </td>
+                                                <td>#50000126</td>
+                                                <td>5</td>
+                                                <td>$100.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Unify Admin Template
+                                                    <p class="m-0 text-muted">
+                                                        Lorem ipsum has become the industry standard.
+                                                    </p>
+                                                </td>
+                                                <td>#50000821</td>
+                                                <td>6</td>
+                                                <td>$49.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td colspan="2">
+                                                    <p>
+                                                        Subtotal<br>
+                                                        Shipping &amp; Handling<br>
+                                                        Tax<br>
+                                                    </p>
+                                                    <h5 class="text-success"><strong>Grand Total</strong></h5>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        $5000.00<br>
+                                                        $100.00<br>
+                                                        $49.00<br>
+                                                    </p>
+                                                    <h5 class="text-success"><strong>$5150.99</strong></h5>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Row end -->
+                        </div>
+                        <div class="invoice-footer">
+                            Thank you for your Business.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></section>
+
+
+</body>
+</html>

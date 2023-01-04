@@ -1,0 +1,22 @@
+.ad{
+min-height: 18rem;
+display: flex;
+
+overflow-x: auto;
+
+
+
+}
+.ad::-webkit-scrollbar{
+width: 0px;
+}
+.ad.as{
+   min-width: 18rem;
+    min-height: 18rem;
+
+    line-height: 18rem;
+
+}
+h2#prod_head{
+    font-family: Aldhabi;
+}
